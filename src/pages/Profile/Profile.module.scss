@@ -1,0 +1,16 @@
+.root {
+    max-width: 700px;
+    padding: 20px;
+    border: 1px solid #dedede;
+    margin: 50px auto;
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    h2 {
+        margin: 0;
+        padding: 0;
+        margin-bottom: 10px;
+    }
+  }
