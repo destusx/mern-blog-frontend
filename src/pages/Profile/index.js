@@ -34,7 +34,7 @@ export const Profile = () => {
             const updateUser = await axios.patch(`/auth/edit/${userData._id}`, {
                 avatarUrl: data.url,
             });
-            setAvatar(`http://localhost:4444${data.url}`);
+            setAvatar(`process.env.REACT_APP_API_URL${data.url}`);
         } catch (error) {
             console.log(error);
             alert('Принимаются форматы: JPEG, PNG, JPG до 1мб');
@@ -50,8 +50,8 @@ export const Profile = () => {
                 ) : (
                     <img
                         src={
-                            `http://localhost:4444${userData?.avatarUrl}` ??
-                            `http://localhost:4444/uploads/default.png`
+                            `process.env.REACT_APP_API_URL${userData?.avatarUrl}` ??
+                            `process.env.REACT_APP_API_URL/uploads/default.png`
                         }
                         alt=""
                     />

@@ -43,7 +43,7 @@ export const Post = ({
     <div className={clsx(styles.root, { [styles.rootFull]: isFullPost })}>
       {isEditable && (
         <div className={styles.editButtons}>
-		<Link to={`http://localhost:3000/posts/${id}/edit`}>
+		<Link to={`process.env.REACT_APP_API_URL/posts/${id}/edit`}>
 			<IconButton  color="primary">
 				<EditIcon />
 			</IconButton>
